@@ -12,11 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-p,
-ul {
+h1, h2, h3, p, ul {
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -33,7 +29,7 @@ ul {
     animation: fadeIn 1s ease;
 }
 
-.hero-content span {
+span {
     color: #ffeb3b;
 }
 
@@ -104,6 +100,12 @@ footer {
     color: white;
 }
 
+
+
+
+
+
+
 /* Initial state for animation */
 .animate_on_scroll {
     transform: translateY(20px);
@@ -120,14 +122,16 @@ footer {
     transform: translateY(20px);
 }
 
+
+
+
+
+
+
+
+
 /* Animations */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
