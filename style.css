@@ -12,7 +12,11 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, p, ul {
+h1,
+h2,
+h3,
+p,
+ul {
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -100,41 +104,30 @@ footer {
     color: white;
 }
 
-
-
-
-
-
-
 /* Initial state for animation */
 .animate_on_scroll {
-    opacity: 0;
     transform: translateY(20px);
     transition: all 0.5s ease;
 }
 
 /* Intro Animation */
 .intro-animation {
-    opacity: 1;
     transform: translateY(0);
 }
 
 /* Outro Animation */
 .outro-animation {
-    opacity: 0;
     transform: translateY(20px);
 }
 
-
-
-
-
-
-
-
-
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
