@@ -5,7 +5,7 @@ function openWhatsApp() {
 }
 
 
-// JavaScript for Scroll Animations
+/* Function for all elements when scrolling */
 document.addEventListener("DOMContentLoaded", () => {
     const animatedElements = document.querySelectorAll(".animate_on_scroll");
 
@@ -17,12 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const observerCallback = (entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("intro-animation");
-                entry.target.classList.remove("outro-animation");
-            } else {
-                entry.target.classList.remove("intro-animation");
-                entry.target.classList.add("outro-animation");
+            // Check if the element is intersecting and hasn't been animated before
+            if (entry.isIntersecting && !entry.target.classList.contains("animation_done")) {
+                entry.target.classList.add("intro_animation", "animation_done");
+                entry.target.classList.remove("outro_animation");
+            } else if (!entry.isIntersecting && !entry.target.classList.contains("animation_done")) {
+                entry.target.classList.remove("intro_animation");
+                entry.target.classList.add("outro_animation");
             }
         });
     };
@@ -33,4 +34,3 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(element);
     });
 });
-
