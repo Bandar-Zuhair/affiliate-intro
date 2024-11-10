@@ -105,25 +105,21 @@ footer {
 
 
 
-
 /* Initial state for animation */
 .animate_on_scroll {
     transform: translateY(0px);
-    transition: all 0.5s ease;
+    transition: all 0.5s ease !important;
 }
 
 /* Intro Animation */
-.intro-animation {
+.intro_animation {
     transform: translateY(0);
 }
 
 /* Outro Animation */
-.outro-animation {
-    transform: translateY(30px);
+.outro_animation {
+    transform: translateY(100px);
 }
-
-
-
 
 
 
